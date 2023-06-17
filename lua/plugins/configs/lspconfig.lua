@@ -64,4 +64,11 @@ require("lspconfig").lua_ls.setup {
   },
 }
 
+require("lspconfig").rust_analyzer.setup{
+  on_attach = M.on_attach,
+  capabilities = M.capabilities,
+  filetype = {"rust"},
+  -- root_dir = lspconfig.utils.root_pattern("Cargo.toml")
+}
+
 return M

@@ -11,7 +11,7 @@ M.lazy = function(install_path)
 
   M.echo "  Compiling base46 theme to bytecode ..."
 
-  local base46_repo = "https://github.com/NvChad/base46"
+  local base46_repo = "git@github.com:NvChad/base46"
   vim.fn.system { "git", "clone", "--depth", "1", "-b", "v2.0", base46_repo, lazy_path }
   vim.opt.rtp:prepend(lazy_path)
 
@@ -19,7 +19,7 @@ M.lazy = function(install_path)
 
   --------- lazy.nvim ---------------
   M.echo "  Installing lazy.nvim & plugins ..."
-  local repo = "https://github.com/folke/lazy.nvim.git"
+  local repo = "git@github.com:folke/lazy.nvim.git"
   vim.fn.system { "git", "clone", "--filter=blob:none", "--branch=stable", repo, install_path }
   vim.opt.rtp:prepend(install_path)
 
@@ -38,7 +38,7 @@ M.gen_chadrc_template = function()
     -- clone example_config repo
     if input == "y" then
       M.echo "cloning example custom config repo ..."
-      vim.fn.system { "git", "clone", "--depth", "1", "https://github.com/NvChad/example_config", path }
+      vim.fn.system { "git", "clone", "--depth", "1", "git@github.com:NvChad/example_config", path }
       vim.fn.delete(path .. ".git", "rf")
     else
       -- use very minimal chadrc

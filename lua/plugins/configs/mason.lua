@@ -1,9 +1,10 @@
 local options = {
-  ensure_installed = { "lua-language-server" }, -- not an option from mason.nvim
+  ensure_installed = { "lua-language-server", "rust_analyzer", "tsserver" }, -- not an option from mason.nvim
 
   PATH = "skip",
-
+  github = {},
   ui = {
+    border = { "╭", "─", "╮","│", "╯","─", "╰", "│" },
     icons = {
       package_pending = " ",
       package_installed = "󰄳 ",

@@ -1,7 +1,7 @@
 return {
   defaults = { lazy = true },
   install = { colorscheme = { "nvchad" } },
-
+  git = { url_format = "git@github.com:%s" },
   ui = {
     icons = {
       ft = "",

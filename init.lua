@@ -1,3 +1,5 @@
+-- rm -rf ~/.local/share/nvim/ ~/.cache/nvim/
+vim.cmd [[ lcd %:p:h ]]
 require "core"
 
 local custom_init_path = vim.api.nvim_get_runtime_file("lua/custom/init.lua", false)[1]
