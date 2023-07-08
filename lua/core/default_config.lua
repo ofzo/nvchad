@@ -24,14 +24,14 @@ M.ui = {
     lspkind_text = true,
     style = "default", -- default/flat_light/flat_dark/atom/atom_colored
     border_color = "default", -- only applicable for "default" style, use color names from base30 variables
-    selected_item_bg = "colored", -- colored / simple
+    selected_item_bg = "simple", -- colored / simple
   },
 
   telescope = { style = "bordered" }, -- borderless / bordered
 
   ------------------------------- nvchad_ui modules -----------------------------
   statusline = {
-    theme = "vscode_colored", -- default/vscode/vscode_colored/minimal
+    theme = "vscode", -- default/vscode/vscode_colored/minimal
     -- default/round/block/arrow separators work only for default statusline theme
     -- round and block will work for minimal theme only
     separator_style = "round",
@@ -48,7 +48,7 @@ M.ui = {
 
   -- nvdash (dashboard)
   nvdash = {
-    load_on_startup = true,
+    load_on_startup = false,
 
     header = {
       "           ▄ ▄                   ",

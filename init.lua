@@ -39,9 +39,3 @@ vim.cmd [[ command W w ]]
 vim.cmd [[ map <leader>s <CMD>w<CR> ]]
 vim.cmd [[ map <leader>w <C-w><C-w> ]]
 
-vim.cmd [[
-  " hi CursorLine term=NONE cterm=NONE guibg=LightGray
-  " hi CursorLineNr term=NONE  cterm=BOLD,ITALIC guifg=Black guibg=LightGray
-]]
---
--- vim.cmd[[ :NvimTreeFocus ]]

@@ -43,7 +43,9 @@ opt.timeoutlen = 400
 opt.undofile = true
 
 
--- opt.foldmethod = "syntax"
+opt.foldmethod = "expr"
+opt.foldexpr = "nvim_treesitter#foldexpr()"
+
 
 -- interval for writing swap file to disk, also used by gitsigns
 opt.updatetime = 250

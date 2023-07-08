@@ -1,5 +1,13 @@
 local options = {
-  ensure_installed = { "lua-language-server", "rust_analyzer", "tsserver" }, -- not an option from mason.nvim
+  ensure_installed = {
+    "lua-language-server",  -- lua
+    "rust_analyzer", -- rust
+    "tsserver", -- typescript
+    "gopls", -- go 
+    "taplo", -- toml
+    "clangd", --  c/c++
+    "cssls", -- css
+  }, -- not an option from mason.nvim
 
   PATH = "skip",
   github = {},

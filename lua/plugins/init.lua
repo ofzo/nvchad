@@ -267,15 +267,17 @@ local default_plugins = {
   },
   {
     "folke/flash.nvim",
-    keys = {{
-      "s",
-      mode = { "n", "x", "o" },
-      function ()
-        require("flash").jump()
-      end,
-      desc = "Flash"
-    },{
-        "<C-s>",
+    keys = {
+      {
+        "s",
+        mode = { "n", "x", "o" },
+        function ()
+          require("flash").jump()
+        end,
+        desc = "Flash"
+      },
+      {
+        "<C-f>",
         mode = { "c" },
         function ()
           require("flash").toggle()
@@ -283,23 +285,6 @@ local default_plugins = {
         desc = "Toggle Flash Search"
       }
     }
-  },
-  {
-    "anuvyklack/pretty-fold.nvim",
-    config = function ()
-      require("pretty-fold").setup{
-        keep_indentation = false,
-        fill_char = '━',
-        sections = {
-          left = {
-            '━ ', function() return string.rep('*', vim.v.foldlevel) end, ' ━┫', 'content', '┣'
-          },
-          right = {
-            '┫ ', 'number_of_folded_lines', ': ', 'percentage', ' ┣━━',
-          }
-        }
-      }
-    end
   }
 }
 
