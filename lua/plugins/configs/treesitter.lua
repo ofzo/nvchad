@@ -1,5 +1,5 @@
 local options = {
-  ensure_installed = { "lua" },
+  ensure_installed = { "lua" , "rust", "typescript", "c" , "css", "html", "go"},
   prefer_git = true,
   highlight = {
     enable = true,

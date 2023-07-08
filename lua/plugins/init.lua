@@ -265,6 +265,42 @@ local default_plugins = {
       require("which-key").setup(opts)
     end,
   },
+  {
+    "folke/flash.nvim",
+    keys = {{
+      "s",
+      mode = { "n", "x", "o" },
+      function ()
+        require("flash").jump()
+      end,
+      desc = "Flash"
+    },{
+        "<C-s>",
+        mode = { "c" },
+        function ()
+          require("flash").toggle()
+        end,
+        desc = "Toggle Flash Search"
+      }
+    }
+  },
+  {
+    "anuvyklack/pretty-fold.nvim",
+    config = function ()
+      require("pretty-fold").setup{
+        keep_indentation = false,
+        fill_char = '━',
+        sections = {
+          left = {
+            '━ ', function() return string.rep('*', vim.v.foldlevel) end, ' ━┫', 'content', '┣'
+          },
+          right = {
+            '┫ ', 'number_of_folded_lines', ': ', 'percentage', ' ┣━━',
+          }
+        }
+      }
+    end
+  }
 }
 
 local config = require("core.utils").load_config()

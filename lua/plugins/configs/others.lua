@@ -2,6 +2,7 @@ local M = {}
 local utils = require "core.utils"
 
 M.blankline = {
+  char = " ",
   indentLine_enabled = 1,
   filetype_exclude = {
     "help",
