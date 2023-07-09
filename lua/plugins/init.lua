@@ -35,7 +35,7 @@ local default_plugins = {
     end,
   },
 
-  {
+ {
     "NvChad/nvim-colorizer.lua",
     init = function()
       require("core.utils").lazy_load "nvim-colorizer.lua"
@@ -283,6 +283,43 @@ local default_plugins = {
           require("flash").toggle()
         end,
         desc = "Toggle Flash Search"
+      }
+    }
+  },
+  {
+    "saecki/crates.nvim",
+    event = { "BufRead Cargo.toml" },
+  },
+  {
+    "simrat39/rust-tools.nvim",
+    opts = {
+      ft = { "rs" },
+      tools = {
+        inlay_hits =  {
+          auto = true,
+                    only_current_line = false,
+                    parameter_hints_prefix = "  ",
+                    other_hints_prefix = "  ",
+        },
+        hover_actions = {
+          border = {
+                { "╭", "FloatBorder" },
+                { "─", "FloatBorder" },
+                { "╮", "FloatBorder" },
+                { "│", "FloatBorder" },
+                { "╯", "FloatBorder" },
+                { "─", "FloatBorder" },
+                { "╰", "FloatBorder" },
+                { "│", "FloatBorder" },
+            },
+            auto_focus = true,
+        },
+        server = {
+            setting = {
+                ["rust-analyzer"] = { checkOnSave = { command = "clippy" } },
+            },
+            standalone = true,
+        },
       }
     }
   }

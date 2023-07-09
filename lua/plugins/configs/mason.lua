@@ -1,6 +1,7 @@
 local options = {
   ensure_installed = {
     "lua-language-server",  -- lua
+    "stylua", -- lua format
     "rust_analyzer", -- rust
     "tsserver", -- typescript
     "gopls", -- go 
